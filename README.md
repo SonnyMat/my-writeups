@@ -73,7 +73,7 @@ GitHub (do dokumentacji)
 
 ---
 
-🏁 Główny cel projektu / pracy
+🏁 Główny cel pracy
 Głównym celem jest:
 ✅ zdobycie praktycznych umiejętności pracy w Linuxie
 ✅ poznanie podstawowych komend i struktury systemu
