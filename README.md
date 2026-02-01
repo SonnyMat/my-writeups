@@ -4,7 +4,7 @@
 - Platforma: CYBER HACK by PJATK 
 - Kategoria: Nauka
 - Program: VMware Fusion na Mac OS / Kali Linux
-- Autor: SonnyMat
+- Autor: SonnyMat - wykonanie zadań / Program - Polsko Japońska Akademia Technik Komputeorwych 
 
 ---
 
