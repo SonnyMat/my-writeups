@@ -1,7 +1,7 @@
 # 🧠 Writeup: Podstawy Systemu Linux oraz Podstawy Systemu Linux jako PENTESTING 
 
 ## 📌 Informacje ogólne
-- Platforma: CYBER HACK
+- Platforma: CYBER HACK by PJATK 
 - Kategoria: Nauka
 - Program: VMware Fusion na Mac OS / Kali Linux
 - Autor: SonnyMat
