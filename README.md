@@ -12,55 +12,56 @@ Write-up: Podstawy Systemu Linux & Scenariusz Pentestowy
 1. Czego się nauczyłam?
 Podczas tych zajęć poznałam fundamenty pracy z systemem Linux (ze szczególnym uwzględnieniem dystrybucji Kali Linux), które są niezbędne w pracy administratora i pentestera. Kluczowe obszary to:
 
-• Zarządzanie połączeniami zdalnymi: Bezpieczne logowanie przez SSH z wykorzystaniem haseł oraz kluczy publicznych/prywatnych.
-• Poruszanie się w terminalu: Efektywne korzystanie ze skrótów klawiszowych i historii komend.
-• Struktura systemu: Zrozumienie hierarchii katalogów (np. /etc dla konfiguracji, /bin dla plików wykonywalnych).
-• Diagnostyka systemu i sieci: Sprawdzanie zasobów sprzętowych (CPU, RAM, dyski) oraz aktywnych połączeń sieciowych.
-• Automatyzacja i usługi: Zarządzanie procesami w tle (systemd) oraz zadaniami harmonogramu (Cron).
-• Eskalacja uprawnień: Praktyczne wykorzystanie błędnej konfiguracji uprawnień plików do przejęcia konta innego użytkownika.
+- **Zarządzanie połączeniami zdalnymi:** Bezpieczne logowanie przez SSH z wykorzystaniem haseł oraz kluczy publicznych/prywatnych.  
+- **Poruszanie się w terminalu:** Efektywne korzystanie ze skrótów klawiszowych i historii komend.  
+- **Struktura systemu:** Zrozumienie hierarchii katalogów (np. `/etc` dla konfiguracji, `/bin` dla plików wykonywalnych).  
+- **Diagnostyka systemu i sieci:** Sprawdzanie zasobów sprzętowych (CPU, RAM, dyski) oraz aktywnych połączeń sieciowych.  
+- **Automatyzacja i usługi:** Zarządzanie procesami w tle (`systemd`) oraz zadaniami harmonogramu (`cron`).  
+- **Eskalacja uprawnień:** Praktyczne wykorzystanie błędnej konfiguracji uprawnień plików do przejęcia konta innego użytkownika. 
 
 --------------------------------------------------------------------------------
 2. Komendy i ich znaczenie
    
 Uzytkownik:
 
-• whoami - Wyświetla nazwę aktualnie zalogowanego użytkownika w systemie + Przydatne, gdy chcesz sprawdzić, na jakim koncie pracujesz np. serwer lub kontener
-• echo $USER - Wypisuje wartość zmiennej środowiskowej USER, czyli nazwę bieżącego użytkownika.
-• env - Wyświetla wszystkie zmienne środowiskowe dostępne w aktualnej sesji. Często używane do: debugowania, sprawdzania konfiguracji aplikacji, pracy z Dockerem
-• id - Pokazuje informacje o użytkowniku, UID (User ID), GID (Group ID), grupy, do których użytkownik należy - **Bardzo ważne - przydatne przy sprawdzaniu uprawnień w systemie Linux.**
+## 🐧 Linux – Umiejętności praktyczne
 
-Zarządzanie systemem i sprzętem: 
+### 👤 Użytkownicy i środowisko systemowe
+- `whoami`, `echo $USER` – weryfikacja kontekstu użytkownika
+- `id` – analiza UID, GID oraz przynależności do grup (kontrola uprawnień)
+- `env` – analiza zmiennych środowiskowych (debugowanie, konfiguracja aplikacji, Docker)
 
-• uname -a – Wyświetla pełne informacje o jądrze i architekturze systemu.
-• cat /proc/cpuinfo oraz cat /proc/meminfo – Szczegółowe dane o procesorze i pamięci RAM.
-• lsblk – Listuje urządzenia blokowe (dyski i partycje).
-• lspci - Wyświetla urządzenia podłączone do magistrali PCI, czyli pokazuje kartę graficzną, kartę sieciową i kontrolery dysków - Przydatne do sprawdzania sprzętu wewnętrznego komputera
-• lsusb - - Wyświetla urządzenia podłączone przez USB, np. mysz. klwiatura, kamera, pendrive i telefon 
-• df -h – Pokazuje zużycie miejsca na dyskach w czytelnym formacie.
-• free -h – Wyświetla ilość wolnej i zużytej pamięci RAM.
-• top – Dynamiczny podgląd uruchomionych procesów i obciążenia systemu.
+---
 
-Operacje na plikach i wyszukiwanie: 
+### 🖥 Diagnostyka systemu i zasobów
+- `uname -a` – identyfikacja jądra i architektury systemu
+- `/proc/cpuinfo`, `/proc/meminfo` – analiza parametrów CPU i RAM
+- `lsblk`, `df -h` – zarządzanie i monitorowanie przestrzeni dyskowej
+- `free -h` – monitorowanie wykorzystania pamięci
+- `top` – analiza procesów i obciążenia systemu
+- `lspci`, `lsusb` – identyfikacja urządzeń sprzętowych
 
-• ls -la – Listuje wszystkie pliki (w tym ukryte) z ich szczegółowymi uprawnieniami.
-• touch [plik] – Tworzy nowy, pusty plik.
-• cp, mv, rm – Odpowiednio: kopiowanie, przenoszenie/zmiana nazwy i usuwanie plików.
-• find / -name '*.conf' 2>/dev/null – Wyszukuje pliki konfiguracyjne w całym systemie, ignorując błędy dostępu.
-• grep [fraza] [plik] – Wyszukuje konkretny tekst wewnątrz pliku.
+---
 
-Sieć i SSH:
+### 📁 Zarządzanie plikami i systemem plików
+- `ls -la` – analiza uprawnień i struktury katalogów
+- `cp`, `mv`, `rm`, `touch` – operacje na plikach
+- `find`, `grep` – wyszukiwanie plików i treści w systemie
+- Praca z przekierowaniami błędów (`2>/dev/null`)
 
-• ssh [user]@[ip] – Łączenie się ze zdalnym serwerem.
-• ssh-keygen – Generowanie pary kluczy SSH.
-• ip a – Wyświetla adresy IP skonfigurowane na interfejsach sieciowych.
-• ss -tlp – Listuje procesy nasłuchujące na portach TCP.
-• cat /etc/resolv.conf – Sprawdzanie skonfigurowanych serwerów DNS.
+---
 
-Zarządzanie pakietami (apt):
+### 🌐 Sieć i zdalny dostęp
+- `ssh`, `ssh-keygen` – konfiguracja i obsługa dostępu SSH (klucze publiczne/prywatne)
+- `ip a` – analiza konfiguracji interfejsów sieciowych
+- `ss -tlp` – diagnostyka portów i usług nasłuchujących
+- `/etc/resolv.conf` – weryfikacja konfiguracji DNS
 
-• apt update – Odświeża listę pakietów z repozytoriów.
-• apt upgrade – Aktualizuje zainstalowane oprogramowanie.
-• apt autoremove – Usuwa niepotrzebne już zależności.
+---
+
+### 📦 Zarządzanie pakietami (Debian/Ubuntu)
+- `apt update`, `apt upgrade` – aktualizacja systemu
+- `apt autoremove` – utrzymanie czystości zależności
 
 --------------------------------------------------------------------------------
 3. Rozwiązanie Scenariusza Pentestowego (Write-up):
