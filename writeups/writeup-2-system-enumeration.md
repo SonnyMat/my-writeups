@@ -22,7 +22,7 @@ SMBClient: Interakcja z udziałami sieciowymi Windows
 
 FTP/cURL/Wget: Pobieranie danych z serwerów plików i serwerów WWW.
 
-## 🚀 Przebieg Ataku (Step-by-Step)
+## 🚀 Przebieg  
 Krok 1: Nmap
 
 Bash
@@ -36,16 +36,16 @@ Krok 2: Eksploatacja HTTP (Serwer WWW)
 Serwer udostępniał pliki bez żadnego zabezpieczenia.
 
 Bash
-wget http://192.168.200.52/flag2.2p.txt
-Analoga: To jak znalezienie darmowej gazety na ławce w parku. Skoro tam leży i nikt jej nie pilnuje, po prostu ją biorę.
+wget http://192.168.***.**/flag.txt
+
 
 Krok 3: Eksploatacja FTP (Brak autoryzacji)
 Wiele serwerów pozwala na tzw. "Anonymous Login".
 
 Bash
-ftp 192.168.200.52 
+ftp 192.168.***.**
 # Logowanie jako: anonymous
-Analogia: Wyobraź sobie magazyn z tabliczką: "Jeśli nie masz klucza, wpisz 'Gość' na klawiaturze, a drzwi się otworzą". To klasyczny błąd administratora, który zapomniał ustawić prawdziwe hasło.
+
 
 Krok 4: Eksploatacja SMB (Udziały sieciowe)
 SMB to protokół do współdzielenia plików w sieci. Sprawdzam, co jest dostępne:
