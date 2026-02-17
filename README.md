@@ -1,4 +1,4 @@
-# 🧠 Writeup: Podstawy Systemu Linux - what I learnt
+# 🧠 Writeup: 1. Podstawy Systemu Linux - what I learnt - basic learning of Linux
 
 ## 📌 Informacje ogólne
 - Platforma: CyberHack by PJATK 
