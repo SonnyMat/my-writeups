@@ -1,4 +1,4 @@
-# 🔐 Protokoły Sieciowe & Transfer Plików — Portfolio
+# 🔐 Protokoły Sieciowe & Transfer Plików 
 
 > **Zajęcia nr 5 | Polsko-Japońska Akademia Technik Komputerowych**  
 > Platforma: HackingDept | Środowisko: Kali Linux + OpenVPN
