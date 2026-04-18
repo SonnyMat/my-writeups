@@ -1,7 +1,6 @@
 # 🔐 Wykrywanie Tylnych Furtek — Lab Writeup
 ### Zajęcia nr 7 | Polsko-Japońska Akademia Technik Komputerowych
 
-> **Dla rekrutera:** To repozytorium dokumentuje moje ćwiczenia z zakresu cyberbezpieczeństwa — konkretnie wykrywania i eksploatowania tylnych furtek (backdoorów) w systemach Linux. Wykonałem 12 praktycznych zadań obejmujących eskalację uprawnień, analizę systemów i narzędzia takie jak linPEAS oraz nmap. Poniżej znajdziesz opis każdego wektora ataku oraz sposoby ochrony przed nim.
 
 ---
 
