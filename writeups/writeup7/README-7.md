@@ -95,7 +95,7 @@ scp linpeas.sh student@192.168.100.7:/home/student
 bash linpeas.sh
 ```
 
-**Czego się nauczyłem:** linPEAS to skrypt shellowy, który automatycznie szuka słabych punktów w systemie. Generuje dużo wyników — w tym fałszywe alarmy (false positives). Dlatego nie można ślepo ufać automatycznym narzędziom — wyniki trzeba analizować manualnie.
+**Czego się nauczyłam:** linPEAS to skrypt shellowy, który automatycznie szuka słabych punktów w systemie. Generuje dużo wyników — w tym fałszywe alarmy (false positives). Dlatego nie można ślepo ufać automatycznym narzędziom — wyniki trzeba analizować manualnie.
 
 ---
 
@@ -109,7 +109,7 @@ su                                  # hasło: toor
 /root/solve
 ```
 
-**Czego się nauczyłem:** "System zero" to referencja. Porównując go z innymi systemami można łatwiej wykryć zmiany (nowe pliki, zmienione hashe, inne wpisy w sudoers).
+**Czego się nauczyłam:** "System zero" to referencja. Porównując go z innymi systemami można łatwiej wykryć zmiany (nowe pliki, zmienione hashe, inne wpisy w sudoers).
 
 ---
 
@@ -150,7 +150,7 @@ find / -type f -perm /6000 2>/dev/null
 /root/solve
 ```
 
-**Czego się nauczyłem:** Polecenie `find / -perm /6000` szuka plików z bitem SUID **lub** SGID w całym systemie. Wyniki trzeba porównać z domyślną instalacją systemu — wszystko co „odstaje" jest podejrzane.
+**Czego się nauczyłam:** Polecenie `find / -perm /6000` szuka plików z bitem SUID **lub** SGID w całym systemie. Wyniki trzeba porównać z domyślną instalacją systemu — wszystko co „odstaje" jest podejrzane.
 
 ---
 
@@ -197,7 +197,7 @@ find / -type f -perm /6000 -exec sha1sum {} \; 2>/dev/null
 /root/solve
 ```
 
-**Czego się nauczyłem:** Sama lista plików z SUID może wyglądać normalnie. Prawdziwa weryfikacja to porównanie hash sumy z czystą instalacją. W środowiskach produkcyjnych do tego służą narzędzia takie jak `AIDE`, `Tripwire` lub `auditd`.
+**Czego się nauczyłam:** Sama lista plików z SUID może wyglądać normalnie. Prawdziwa weryfikacja to porównanie hash sumy z czystą instalacją. W środowiskach produkcyjnych do tego służą narzędzia takie jak `AIDE`, `Tripwire` lub `auditd`.
 
 ---
 
@@ -293,7 +293,7 @@ su
 /root/solve
 ```
 
-**Czego się nauczyłem:** `file://` to protokół URL do lokalnych plików. curl z sudo może pobierać i zapisywać pliki z uprawnieniami roota — to bardzo niebezpieczna konfiguracja.
+**Czego się nauczyłam:** `file://` to protokół URL do lokalnych plików. curl z sudo może pobierać i zapisywać pliki z uprawnieniami roota — to bardzo niebezpieczna konfiguracja.
 
 ---
 
@@ -316,7 +316,7 @@ socat FILE:`tty`,raw,echo=0 TCP:127.0.0.1:12345
 /root/solve
 ```
 
-**Czego się nauczyłem:** Bind shell to proces nasłuchujący na porcie i dający dostęp do powłoki każdemu kto się połączy. `ss -tlpn` i `ps aux` to podstawowe narzędzia do wykrywania takich procesów.
+**Czego się nauczyłam:** Bind shell to proces nasłuchujący na porcie i dający dostęp do powłoki każdemu kto się połączy. `ss -tlpn` i `ps aux` to podstawowe narzędzia do wykrywania takich procesów.
 
 ---
 
