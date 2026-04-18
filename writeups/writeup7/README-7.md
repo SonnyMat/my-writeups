@@ -29,9 +29,6 @@ To są notatki i writeup z laboratorium bezpieczeństwa przeprowadzonego w środ
 - Automatyczna analiza z linPEAS
 - Skanowanie portów z nmap
 
-**Poziom trudności:** Entry-level / Junior  
-**Czas realizacji:** ~4-6 godzin
-
 ---
 
 ## 🖥️ Środowisko laboratoryjne
