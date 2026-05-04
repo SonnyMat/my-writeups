@@ -10,8 +10,6 @@
 
 ## 📂 Writeups
 
-- [Writeup 1 – Privilege Escalation](writeups/writeup - 1 - privilege escalation/writeup-1-privilege-escalation.md)
-- [Writeup 2 – System & Network Enumeration](writeups/writeup - 2 - system enumeration/writeup-2-system enumeration.md) 
 
 
 
