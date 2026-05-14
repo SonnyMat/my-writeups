@@ -13,14 +13,11 @@
 
 ---
 
-> **Dla kogo?** Dla studenta, który chce nie tylko rozwiązać zadanie, ale zrozumieć *dlaczego* to działa — co robi każda komenda, jak przebiega atak od A do Z, i jak tego bronić w prawdziwym projekcie.
-
 ---
 
 ## 📋 Spis treści
 
-- [Czego się nauczysz?](#-czego-się-nauczysz)
-- [Środowisko i VPN](#-środowisko-i-vpn)
+- [Czego się nauczyłam?](#-czego-się-nauczyłam)
 - [Co to jest XXE?](#-co-to-jest-xxe)
 - [Jak działa parser XML?](#-jak-działa-parser-xml)
   - [DTD — Document Type Definition](#dtd--document-type-definition)
@@ -45,9 +42,9 @@
 
 ---
 
-## 🎯 Czego się nauczysz?
+## 🎯 Czego się nauczyłam?
 
-Po przerobieniu tych zadań i notatek będziesz rozumiał:
+Po przerobieniu tych zadań i notatek zrozumiałam:
 
 - ✅ Czym jest encja XML i dlaczego zewnętrzne encje są niebezpieczne
 - ✅ Jak XXE może prowadzić do odczytu dowolnych plików z serwera
@@ -60,25 +57,6 @@ Po przerobieniu tych zadań i notatek będziesz rozumiał:
 - ✅ Jak skutecznie zabezpieczyć parser XML (PHP, Java, Python, Node.js)
 
 ---
-
-## 🖥️ Środowisko i VPN
-
-Przed rozpoczęciem zadań upewnij się, że odpowiednie maszyny są włączone w panelu platformy.
-
-| Maszyna | IP | Zadania |
-|---|---|---|
-| `WEB - XXE` | `192.168.100.13` | 13.1, 13.2, 13.3 (Blue Team) |
-| `WEB - XXE PENTEST` | `192.168.100.63` | 13.1p – 13.5p (Red Team) |
-
-**Połączenie VPN (wymagane przed każdym zadaniem):**
-
-```bash
-# Pobierz plik .ovpn z menu "VPNy" na stronie głównej platformy
-sudo openvpn /ścieżka/do/pliku.ovpn
-```
-
-> 💡 Jeśli zadanie się nie zalicza automatycznie mimo poprawnego rozwiązania, wejdź na `/status` na maszynie zadaniowej — znajdziesz tam flagę do ręcznego wklejenia na platformie.
-
 ---
 
 ## 🔍 Co to jest XXE?
@@ -254,7 +232,6 @@ XXE (XML External Entity)
 ## 🧪 Zadania Blue Team
 
 > **Środowisko:** `WEB - XXE` → `http://192.168.100.13/`  
-> VPN wymagany przed każdym zadaniem.
 
 ---
 
